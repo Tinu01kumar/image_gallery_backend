@@ -404,7 +404,7 @@ export const upload = multer({
 
 export const uploadimage = async (req, res) => {
   const userEmail = req.body.email;
-  console.log({ email: userEmail });
+  
 
   Imagefile.create({ email: userEmail, image: req.file.filename })
     .then((result) => {
